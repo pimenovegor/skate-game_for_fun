@@ -1,0 +1,91 @@
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.btn{
+  visibility: hidden;
+  align-self: center;
+  margin-top: 30px;
+  width: 200px;
+  height: 25px;
+  background-color: rgb(41, 41, 41);
+  color:white;
+  border: none;
+}
+
+.field {
+  margin-top: 100px;
+  align-self: center;
+  height: 200px;
+  width: 500px;
+  border-bottom: 5px solid;
+}
+
+.counter {
+  position: absolute;
+  font-weight: bold;
+}
+
+.skater {
+  position: relative;
+  top: 115px;
+  left: 100px;
+  width: 80px;
+  height: 90px;
+  background-image: url(png/skater.png);
+  background-size: 80px 90px;
+}
+
+.jump {
+  animation-name: jump;
+  animation-duration: 0.25s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+@keyframes jump {
+  0% {
+    top: 115px;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+.barrier {
+  position: relative;
+  top: 60px;
+  left: 450px;
+  width: 50px;
+  height: 60px;
+  background-image: url(png/barrier.png);
+  background-size: 50px 60px;
+}
+
+.move {
+  animation-name: move;
+  /* animation-duration: 1s; */
+  animation-timing-function: linear;
+  animation-iteration-count:infinite;
+  /* animation-delay: 0.3s; */
+}
+
+.stop {
+  animation-play-state:paused;
+}
+
+/* .speedup{
+  animation-play-state: ;
+} */
+
+@keyframes move {
+  0% {
+    left: 450px;
+  }
+  100% {
+    left: 10px;
+  }
+}
