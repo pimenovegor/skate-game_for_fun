@@ -55,7 +55,6 @@ const start = function () {
     countInterval = setInterval(count, 1000);
   }, 500);
   positionCheckInterval = setInterval(positionCheck, 10);
-  document.removeEventListener("keydown", start);
 };
 
 const restart = function () {
@@ -68,6 +67,6 @@ const restart = function () {
   start();
 };
 
-document.addEventListener("keydown", start);
+document.addEventListener("keydown", start, {once:true});
 document.addEventListener("keydown", skaterJump);
 btn.addEventListener("click", restart);
